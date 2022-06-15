@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/foo','App\Http\Controllers\TestController@foo')->name('homepage');
-Route::get('/index', [TestController::class],'index') ;
+Route::get('/index', [TestController::class],'index')->name('index') ;
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
