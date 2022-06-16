@@ -20,13 +20,13 @@ class TestController extends Controller
         return \view('test.mytest');
     }
 
-    public function foo()
+    public function food()
     {
         if(!Gate::allows('access-admin')){
             \abort('403');
         }
         else {
-            return \view('foo');
+            return \view('food');
         }
             
     }

@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/foo','App\Http\Controllers\TestController@foo')->name('homepage');
+Route::get('/food','App\Http\Controllers\TestController@food')->name('food');
 Route::get('/index', [TestController::class],'index')->name('index') ;
 Route::get('/dashboard', function () {
     return view('dashboard');
