@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MenuController;
 use App\Http\Controllers\TestController;
 
 /*
@@ -19,7 +20,9 @@ Route::get('/', function () {
 });
 
 Route::get('/food','App\Http\Controllers\TestController@food')->name('food');
-Route::get('/index', [TestController::class],'index')->name('index') ;
+Route::get('/index', [TestController::class,'index'])->name('index') ;
+Route::get('/ajout-menu',[MenuController::class,'addMenu']);
+Route::post('store-menu/',[MenuController::class, 'storeMenu']);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
