@@ -11,6 +11,7 @@ class Menu extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['titre','description'];
     public function commandes()
     {
         return $this->belongsToMany(Commande::class);
