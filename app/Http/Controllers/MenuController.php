@@ -29,6 +29,15 @@ class MenuController extends Controller
         $menu->image()->save($image);
         dd('menu creer');
     }
+
+    public function showMenu()
+    {
+        $menus = Menu::all();
+       // $image = Image
+        //dd($menus);
+          return \view('food',
+          ['menus'=>$menus]);
+    }
 }
 
 ?>

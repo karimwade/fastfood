@@ -23,6 +23,7 @@ Route::get('/food','App\Http\Controllers\TestController@food')->name('food');
 Route::get('/index', [TestController::class,'index'])->name('index') ;
 Route::get('/ajout-menu',[MenuController::class,'addMenu']);
 Route::post('store-menu/',[MenuController::class, 'storeMenu'])->name('menu.store');
+Route::get('/show-menu', [MenuController::class, 'showMenu'])->name('show.menu');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
