@@ -32,11 +32,12 @@ class MenuController extends Controller
 
     public function showMenu()
     {
-        $menus = Menu::all();
-       // $image = Image
+        //$menus = Menu::all();
+        $images = Image::all();
         //dd($menus);
           return \view('food',
-          ['menus'=>$menus]);
+        //   ['menus'=>$menus,
+            ['images'=>$images]);
     }
 }
 
